@@ -2,6 +2,7 @@ package com.nmkip.bankkata.feature;
 
 import com.nmkip.bankkata.Account;
 import com.nmkip.bankkata.Console;
+import com.nmkip.bankkata.TransactionRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,7 +22,9 @@ public class PrintStatementFeature {
 
     @Before
     public void setUp() throws Exception {
-        account = new Account();
+        // Real repository (in memory repository) - Testing the system as a whole. Just mocking the external world
+        TransactionRepository transactionRepository = new TransactionRepository();
+        account = new Account(transactionRepository);
     }
 
     @Test
@@ -41,4 +44,11 @@ public class PrintStatementFeature {
         inOrder.verify(console).printLine("10/06/2018 | -100.00 | 900.00");
         inOrder.verify(console).printLine("10/06/2018 | 1000.00 | 1000.00");
     }
+
+    // If Console is a mock and we are verifying those printLine, then why aren't we injecting the mock somewhere?
+    // Why aren't we injecting the Console into Account?
+    // We are not sure if Account will be calling the Console.
+    // We don't know what we will have between the Account and the Console, so we are not going to inject it now.
+    // We are going down to the unit level, start unit testing the Account and then we will see if the Console must
+    // be injected into the Account or somewhere else.
 }
