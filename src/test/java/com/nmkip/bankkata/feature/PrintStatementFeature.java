@@ -2,6 +2,7 @@ package com.nmkip.bankkata.feature;
 
 import com.nmkip.bankkata.Account;
 import com.nmkip.bankkata.Console;
+import com.nmkip.bankkata.StatementPrinter;
 import com.nmkip.bankkata.TransactionRepository;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,20 +12,18 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import static org.mockito.Mockito.verify;
-
 @RunWith(MockitoJUnitRunner.class)
 public class PrintStatementFeature {
 
-    @Mock
-    private Console console;
+    @Mock Console console;
     private Account account;
 
     @Before
     public void setUp() throws Exception {
         // Real repository (in memory repository) - Testing the system as a whole. Just mocking the external world
         TransactionRepository transactionRepository = new TransactionRepository();
-        account = new Account(transactionRepository);
+        StatementPrinter statementPrinter = new StatementPrinter();
+        account = new Account(transactionRepository, statementPrinter);
     }
 
     @Test
