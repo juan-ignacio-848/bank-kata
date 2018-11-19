@@ -1,4 +1,4 @@
-####Problem description - Bank kata
+#### Problem description - Bank kata
 
 Create a simple bank application with the following features:
 
@@ -6,7 +6,7 @@ Create a simple bank application with the following features:
 - Withdraw from an Account
 - Print a bank statement to the console
 
-####Acceptance criteria
+#### Acceptance criteria
 
 Statement should have transactions in the following format:
 
