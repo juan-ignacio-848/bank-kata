@@ -11,9 +11,9 @@ Create a simple bank application with the following features:
 Statement should have transactions in the following format:
 
 \> DATE | AMOUNT | BALANCE  
-\> 10/06/2018 | 300 | 1200  
-\> 08/06/2018 | -100 | 900  
-\> 10/05/2018 | 1000 | 1000  
+\> 10/06/2018 | 300.00 | 1200.00  
+\> 08/06/2018 | -100.00 | 900.00  
+\> 10/05/2018 | 1000.00 | 1000.00  
 
 #### Starting point and constraints
 
