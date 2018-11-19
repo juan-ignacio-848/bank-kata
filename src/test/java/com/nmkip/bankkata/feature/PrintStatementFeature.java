@@ -17,7 +17,7 @@ public class PrintStatementFeature {
     private Account account;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         // Real repository (in memory repository) - Testing the system as a whole. Just mocking the external world
         TransactionRepository transactionRepository = new TransactionRepository(clock);
         StatementPrinter statementPrinter = new StatementPrinter();
