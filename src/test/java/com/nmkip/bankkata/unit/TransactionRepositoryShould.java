@@ -24,7 +24,7 @@ public class TransactionRepositoryShould {
     @Before
     public void setUp() {
         transactionRepository = new TransactionRepository(clock);
-        given(clock.today()).willReturn(TODAY);
+        given(clock.todayString()).willReturn(TODAY);
     }
 
     @Test

@@ -12,6 +12,14 @@ public class Transaction {
         this.amount = amount;
     }
 
+    public int amount() {
+        return amount;
+    }
+
+    public String date() {
+        return date;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

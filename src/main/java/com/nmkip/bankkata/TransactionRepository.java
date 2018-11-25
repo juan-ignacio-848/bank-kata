@@ -14,11 +14,11 @@ public class TransactionRepository {
     }
 
     public void addDeposit(int amount) {
-        transactions.add(new Transaction(clock.today(), amount));
+        transactions.add(new Transaction(clock.todayString(), amount));
     }
 
     public void addWithdrawal(int amount) {
-        transactions.add(new Transaction(clock.today(), -amount));
+        transactions.add(new Transaction(clock.todayString(), -amount));
     }
 
     public List<Transaction> allTransactions() {
