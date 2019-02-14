@@ -19,8 +19,10 @@ import static org.mockito.Mockito.verify;
 @RunWith(MockitoJUnitRunner.class)
 public class AccountShould {
 
-    @Mock TransactionRepository transactionRepository;
-    @Mock StatementPrinter statementPrinter;
+    @Mock
+    TransactionRepository transactionRepository;
+    @Mock
+    StatementPrinter statementPrinter;
 
     private Account account;
 

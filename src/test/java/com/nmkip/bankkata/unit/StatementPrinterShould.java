@@ -17,7 +17,8 @@ import static org.mockito.Mockito.verify;
 @RunWith(MockitoJUnitRunner.class)
 public class StatementPrinterShould {
 
-    @Mock Console console;
+    @Mock
+    Console console;
 
     @Test
     public void print_statement_header() {
