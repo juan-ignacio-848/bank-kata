@@ -14,13 +14,13 @@ public class Account {
 
     public void deposit(int amount) {
         Transaction deposit = new Deposit(clock.todayAsString(), amount);
-        transactionRepository.addDeposit(deposit);
+        transactionRepository.add(deposit);
     }
 
 
     public void withdraw(int amount) {
-        Transaction withdraw = new Withdrawal(clock.todayAsString(), amount);
-        transactionRepository.addWithdrawal(withdraw);
+        Transaction withdrawal = new Withdrawal(clock.todayAsString(), amount);
+        transactionRepository.add(withdrawal);
     }
 
     public void printStatement() {

@@ -20,7 +20,7 @@ public class TransactionRepositoryShould {
     public void store_a_deposit_transaction() {
         Transaction deposit = new Deposit("25/02/2019", 450);
 
-        transactionRepository.addDeposit(deposit);
+        transactionRepository.add(deposit);
         List<Transaction> transactions = transactionRepository.allTransactions();
 
         assertThat(transactions.size()).isEqualTo(1);
@@ -31,7 +31,7 @@ public class TransactionRepositoryShould {
     public void store_a_withdrawal_transaction() {
         Transaction withdrawal = new Withdrawal("25/02/2019", 450);
 
-        transactionRepository.addWithdrawal(withdrawal);
+        transactionRepository.add(withdrawal);
         List<Transaction> transactions = transactionRepository.allTransactions();
 
         assertThat(transactions.size()).isEqualTo(1);

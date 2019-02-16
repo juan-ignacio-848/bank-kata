@@ -37,7 +37,7 @@ public class AccountShould {
 
         account.deposit(250);
 
-        verify(transactionRepository).addDeposit(new Deposit("22/03/2019", 250));
+        verify(transactionRepository).add(new Deposit("22/03/2019", 250));
     }
 
     @Test
@@ -46,7 +46,7 @@ public class AccountShould {
 
         account.withdraw(250);
 
-        verify(transactionRepository).addWithdrawal(new Withdrawal("25/04/2019", 250));
+        verify(transactionRepository).add(new Withdrawal("25/04/2019", 250));
     }
 
     @Test

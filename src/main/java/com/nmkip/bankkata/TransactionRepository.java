@@ -8,11 +8,7 @@ public class TransactionRepository {
 
     private List<Transaction> transactions = new ArrayList<>();
 
-    void addDeposit(Transaction transaction) {
-        transactions.add(transaction);
-    }
-
-    void addWithdrawal(Transaction transaction) {
+    void add(Transaction transaction) {
         transactions.add(transaction);
     }
 
