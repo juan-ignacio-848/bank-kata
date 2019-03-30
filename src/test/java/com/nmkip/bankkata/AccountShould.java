@@ -58,7 +58,6 @@ public class AccountShould {
         List<Transaction> transactions = singletonList(new Deposit(NOW, 1000));
         given(transactionRepository.allTransactions()).willReturn(transactions);
 
-
         account.printStatement();
 
         verify(statementPrinter).print(transactions);
